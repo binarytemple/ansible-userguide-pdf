@@ -1,0 +1,8 @@
+latex/*
+*.log
+.ropeproject/*
+.doctrees/*
+.ansible-checkout
+output/*
+ansible_userguide.pdf
+ansible-checkout

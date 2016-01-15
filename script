@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# # Install Sphinx via pip
+pip install sphinx
+
+# # Clone Ansible's repo
+git clone git://github.com/ansible/ansible.git --recursive --branch stable-2.0.0.1 ./ansible-checkout/ansible
+
+python build-site.py ./ansible-checkout/ansible/docsite/rst/
+cd latex; pdflatex --interaction=nonstopmode ansible.tex;
+mv ansible.pdf ../ansible_userguide.pdf; cd ..
